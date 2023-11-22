@@ -1,0 +1,100 @@
+#include<stdio.h>
+int main()
+{
+	int n;
+	printf("\nEnter the value of n:");
+	scanf("%d",&n);
+	int num[n];
+	for(int i=0;i<n;i++)
+	{
+		printf("\n element : %d",i+1);
+		scanf("%d",&num[i]);
+	}
+}
+
+TEMPERATURE PROBLEM:
+#include<stdio.h>
+int main()
+{
+	//getting input from the user
+	float temp[30];
+	for(int i=0;i<30;i++)
+	{
+		printf('\n Temperature at day %d : %f ");
+		scanf("%f",&temp[i]);
+	}
+
+	//find the sum
+	float sum=0;
+	for(int i =0;i,30;i++)
+	{
+		sum += temp[i];
+	}
+
+	//finding the average
+	float avg;
+	avg = sum/30;
+	printf("\nThe sum is: %f, sum);
+	printf("\nThe average is :%f, avg);
+
+	//finding the minimum temperature
+	float min = temp[0];
+	for(int i=0;i<30;i++)
+	{
+		if(temp[i] > min)
+		{
+			min = temp[i];
+		}
+	}
+	printf("\nThe minimum temperature is : %f",min);
+
+	//finding the maximum temperature
+	float max = temp[0];
+	for(int i=0;i<30;i++)
+	{
+		if(temp[i] > max)
+		{
+			max = temp[i];
+		}
+	}
+	printf("\nThe maximum temperature is : %f",max);
+
+	//how many days have same minimum temperature
+	int c=0;
+	for(int i=0;i<30;i++)
+	{
+		if(min == temp[i])
+		{
+			c++;
+		}
+	}
+	printf("\n The number of days that have same number of minimum temperature is : %d ", c);
+
+	//how many days have same maximum temperature
+	int d=0;
+	for(int i=0;i,30;i++)
+	{
+		if(max == temp[i])
+		{
+			d++;
+		}
+	}
+	printf("\nThe number of days that have same number of maximum temperature is : %d",d);
+
+	//searching for a particular temperature
+	float x;
+	printf("\nEnter the temperature  you have to search :");
+	scanf("%f",&x);
+	for(int i=0;i<30;i++)
+	{
+		if(temp[i] == x)
+		{
+			printf("\nFOUND");
+			break;
+		}
+	}
+	if(i>30)
+	{
+		printf("\n NOT FOUND");
+	}
+}
